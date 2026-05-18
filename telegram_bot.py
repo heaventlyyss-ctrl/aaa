@@ -14,11 +14,15 @@ INTERVAL_MINUTES   = 10                  # Интервал отправки в 
 # ================================
 
 def get_sheet_data():
+    import json
     scope = [
         "https://spreadsheets.google.com/feeds",
         "https://www.googleapis.com/auth/drive"
     ]
-    creds = ServiceAccountCredentials.from_json_keyfile_name(CREDENTIALS_FILE, scope)
+    with open(CREDENTIALS_FILE, "r") as f:
+        creds_dict = json.load(f)
+    creds_dict["private_key"] = creds_dict["private_key"].replace("\\n", "\n")
+    creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
     client = gspread.authorize(creds)
 
     spreadsheet = client.open_by_url(SPREADSHEET_URL)
@@ -66,3 +70,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
