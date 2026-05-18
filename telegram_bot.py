@@ -1,4 +1,6 @@
 import asyncio
+import json
+import os
 import gspread
 from telegram import Bot
 from oauth2client.service_account import ServiceAccountCredentials
@@ -8,26 +10,27 @@ from datetime import datetime
 TELEGRAM_BOT_TOKEN = "8633341618:AAE4rF2kdlo3uxZ1vNCjMCPEM6j5-qYo7vw"
 TELEGRAM_CHAT_ID   = "697051704"
 SPREADSHEET_URL    = "https://docs.google.com/spreadsheets/d/1gepN13SwdKtewNe1HLY-RLNWCZFBQ81GEppSjRmd5IE/edit"
-SHEET_GID          = 31278572             # gid из ссылки
-CREDENTIALS_FILE   = "credentials.json"  # Файл ключа Google Service Account
-INTERVAL_MINUTES   = 10                  # Интервал отправки в минутах
+SHEET_GID          = 31278572
+INTERVAL_MINUTES   = 10
 # ================================
 
 def get_sheet_data():
-    import json
     scope = [
         "https://spreadsheets.google.com/feeds",
         "https://www.googleapis.com/auth/drive"
     ]
-    with open(CREDENTIALS_FILE, "r") as f:
-        creds_dict = json.load(f)
+    google_creds = os.environ.get("GOOGLE_CREDENTIALS")
+    if google_creds:
+        creds_dict = json.loads(google_creds)
+    else:
+        with open("credentials.json", "r") as f:
+            creds_dict = json.load(f)
     creds_dict["private_key"] = creds_dict["private_key"].replace("\\n", "\n")
     creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
     client = gspread.authorize(creds)
 
     spreadsheet = client.open_by_url(SPREADSHEET_URL)
 
-    # Найти лист по gid
     worksheet = None
     for sheet in spreadsheet.worksheets():
         if sheet.id == SHEET_GID:
@@ -63,11 +66,10 @@ async def send_report(bot: Bot):
 async def main():
     bot = Bot(token=TELEGRAM_BOT_TOKEN)
     print("Бот запущен! Отправляю отчёт каждые", INTERVAL_MINUTES, "минут.")
-    await send_report(bot)  # Сразу отправить первый отчёт
+    await send_report(bot)
     while True:
         await asyncio.sleep(INTERVAL_MINUTES * 60)
         await send_report(bot)
 
 if __name__ == "__main__":
     asyncio.run(main())
-
