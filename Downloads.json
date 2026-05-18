@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "spry-bricolage-496710-s7",
+  "private_key_id": "65a04da29961838845040e677563d3840732415e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC7G4Sik0/brXbI\nCjJvaCYyTIMtW2m/k7HRaGDPD8reblDni28g4uBDOl2Bwh2qBA2THoOaveAK+Msk\nx15Y7CGAKlzl5Ju7m8WACDxXMkGCoWtKafe48w6IUV0yA8pRE5TOJJJqV6nJViYg\nVLODR/WfD6yPUxoZ3MYNmAb1KnTOWCGDeXxXQG1P4teCa3MDa0QNKBMHi3V5NWJ3\nAW2CsD88aS7XCyH6vXdQGll89qgsZOMg7sChe+G5a8ebsGxI1soR+jV3iNlSqHJS\niOLEjUnODg8IfpBeZbjI5WufCu0EpdoSYap1qwGhBpSpw9zJRBtZEkWJSqVBUlwO\nqPLb77TTAgMBAAECggEAO9CdQzfixLCck3CnFPRvmY7aNKrPkJ4Pr4k1wZwj153e\noVby7Ml6tiM3d17uCscG6+xKWDKxJ/DHSHev0q+SOh3Q2vGNU5mFtttrJtj7Fl6y\nJPTha6/QCoYwS+foSqj+3jPU1sg1kBbJU3ageKyNeg8RtDP12SS57+iU+NVcyAXa\nLvA9SClMBJMZ7bMve6YYDkG2JQjldKODnGCsxLjjNN+j0qiEI+cCXp1NynpfxGA/\nv34G3mzWRmh88m0pGTjLNYngb+NgQz31c/mWhUrsmK4Pc/4KWmYz/2RlS9MAiIl2\n2/+uUrD92VTZ184IbQIulmTwBES64wkv++meKk0f4QKBgQDtxR5y+m8b9HcnraXm\nLj4ZCNbEqEhuyH7x1N/Mejsv9K1jEpXQcWlx7bn9RyZAblc8szc8WK9v3vY0ae1H\niAdtKSnUypETca4Gb7GiShZlRcW7mnx4RzOAnP2mI9UHOKxrhGiDTYqpL4Ja/gBM\ntrdAV2gNLmnzLo2vwG2ZUyOAkQKBgQDJdAKXxRyiKbAbZbY/7a5Axkv/ic7OK8Ib\nJo6oQwbuSreF5UY6nue1Z0SbHcC8zUQJCfnchj1BDDfHewBnNSLWeNmwVYf0hfsP\nf8fvd8uVd9cHonuSMIgT0BAJaopKMZAi0M30dKNHDUaNzYnpKRx7fvCVkjVYysLH\nZNRhH5ORIwKBgQDCYeZ0xTxUtFU9gP8h4SgvO0SpXZJpz0vI1Olpt3vvxq6BUk5c\nLHuyAlGNOL+S6SI0o6dClJZIdRT+4KJ1WkYH/iEOr9RO+x70cBfev4bzoEj5CGE9\ny6fVO4M6cgzUbIa5F3SB88CqdAaz8Pe5v56s4UhVjl5byvFWf5CaSpe5oQKBgQCf\nQtKl75Pic7ihADkjsyC2Xs5IOEdBYQC0fDf9t/ervW/3L7nksCmYlQp84vmziUeH\nKdbZy1pzqVgToR9BeJWRHrtil0vDOYSwzSFgJMHS6YoapA6zFSEPIMb82rh3TVWY\n4KBh6TAIBOvJQTwNE45L56AFbzAzgSCZiBIKsm70JwKBgGzrmXsQvd/p75K+zl+N\nUIHqeLJb/8+ikP4QRbSApSEcUrMEXE3JEd5bHmNWq9YduJR4rXDREkaZ43Dufssn\n/IvX9/rcLrc2HZgVgiIWz39e6QMkmUBdVtPBtC2b4bhdL/8gVA+WZI9Ymcz2wPYh\nx45CYzmNvuRakBwXG3YlBH9I\n-----END PRIVATE KEY-----\n",
+  "client_email": "telegram-bot@spry-bricolage-496710-s7.iam.gserviceaccount.com",
+  "client_id": "111500911909865405577",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/telegram-bot%40spry-bricolage-496710-s7.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
